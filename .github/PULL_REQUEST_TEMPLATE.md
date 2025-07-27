@@ -1,6 +1,4 @@
-# 🚀 Pull Request
-
-## Summary
+# Summary
 
 Briefly describe the purpose of this PR and what it changes.
 
