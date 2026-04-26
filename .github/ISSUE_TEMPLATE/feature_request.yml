@@ -1,0 +1,83 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: [ "enhancement", "triage" ]
+type: feature
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature 🚀  
+        Please provide clear details so we can evaluate it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ✨ Feature Description
+      description: What do you want to build or improve?
+      placeholder: Describe the feature clearly...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 📌 Problem / Motivation
+      description: What problem does this solve?
+      placeholder: Explain the need or use case...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 🔧 Proposed Solution
+      description: How could this be implemented?
+      placeholder: Outline approach, APIs, UX, etc.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Any alternative solutions or workarounds?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚡ Priority
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: dropdown
+    id: approval
+    attributes:
+      label: ✅ Approval Status
+      description: For maintainers to update during triage
+      options:
+        - Pending Review
+        - Approved
+        - Needs Discussion
+        - Rejected
+      default: 0
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 🔗 Additional Context
+      description: Links, designs, screenshots, or references
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist
+      options:
+        - label: I have searched for existing feature requests
+          required: true
+        - label: This is not a duplicate request
+          required: true
+        - label: I am willing to contribute (optional)
