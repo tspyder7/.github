@@ -1,83 +1,40 @@
 name: Feature Request
 description: Suggest a new feature or improvement
 title: "[Feature]: "
-labels: [ "enhancement", "triage" ]
-type: feature
+labels: [ "enhancement" ]
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for suggesting a feature 🚀  
-        Please provide clear details so we can evaluate it quickly.
-
   - type: textarea
     id: description
     attributes:
-      label: ✨ Feature Description
-      description: What do you want to build or improve?
-      placeholder: Describe the feature clearly...
+      label: Feature description
+      description: What do you want to add or improve?
+      placeholder: Describe the feature clearly
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: 📌 Problem / Motivation
-      description: What problem does this solve?
-      placeholder: Explain the need or use case...
+      label: Problem / Use case
+      description: Why is this needed?
+      placeholder: Explain the problem it solves
     validations:
       required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: 🔧 Proposed Solution
+      label: Suggested solution
       description: How could this be implemented?
-      placeholder: Outline approach, APIs, UX, etc.
-
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: 🔄 Alternatives Considered
-      description: Any alternative solutions or workarounds?
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: ⚡ Priority
-      options:
-        - Low
-        - Medium
-        - High
+      placeholder: Outline your idea
     validations:
-      required: true
-
-  - type: dropdown
-    id: approval
-    attributes:
-      label: ✅ Approval Status
-      description: For maintainers to update during triage
-      options:
-        - Pending Review
-        - Approved
-        - Needs Discussion
-        - Rejected
-      default: 0
-
-  - type: textarea
-    id: context
-    attributes:
-      label: 🔗 Additional Context
-      description: Links, designs, screenshots, or references
+      required: false
 
   - type: checkboxes
-    id: checklist
+    id: confirm
     attributes:
-      label: ✅ Checklist
+      label: Checklist
       options:
-        - label: I have searched for existing feature requests
+        - label: I checked for existing feature requests
           required: true
-        - label: This is not a duplicate request
-          required: true
-        - label: I am willing to contribute (optional)
