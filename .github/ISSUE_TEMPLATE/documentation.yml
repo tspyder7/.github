@@ -1,0 +1,76 @@
+name: Documentation Update
+description: Suggest improvements or report issues in documentation
+title: "[Docs]: "
+labels: [ "documentation" ]
+type: documentation
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation 🙌  
+        Clear, specific details help us fix things faster.
+
+  - type: input
+    id: location
+    attributes:
+      label: 📍 Documentation Location
+      description: Where is the issue?
+      placeholder: e.g. /docs/setup.md, API > Auth section, README
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 🧩 Type of Issue
+      options:
+        - Missing information
+        - Incorrect information
+        - Unclear / confusing
+        - Outdated content
+        - Typo / formatting
+        - New documentation request
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ❓ What’s the Problem?
+      description: Explain what’s wrong or missing
+      placeholder: Be specific about the issue...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: ✍️ Proposed Improvement
+      description: How should this be fixed or improved?
+      placeholder: Suggest exact wording, structure, or examples...
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 🎯 Impact
+      description: Who is affected and how?
+      placeholder: e.g. New users blocked during setup...
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 🔗 References
+      description: Links, examples, or related discussions
+      placeholder: Add helpful resources...
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist
+      options:
+        - label: I have checked existing documentation
+          required: true
+        - label: I have searched for similar issues
+          required: true
+        - label: I am willing to submit a PR (optional)
